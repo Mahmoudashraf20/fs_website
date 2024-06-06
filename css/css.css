@@ -1,0 +1,47 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.image-container img {
+    width: 60%;
+    height: auto;
+    display: block;
+    
+}
+
+.image-container .foreground-image {
+    position: absolute;
+    bottom: -20px;
+    left: 90px;
+    width: 40%;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-section {
+    margin-top: 20px;
+    padding: 60px 0;
+    background-color:aquamarine;
+}
+
+.content-section .text-content {
+    color: white;
+    display: flex;
+    margin-left: -90px;
+    flex-direction: column;
+    justify-content: center;
+}
+.background-image{
+    width:"20px"
+}
+
+.navbar-nav {
+    flex: 1;
+    justify-content: center;
+}
+.navbar-brand {
+    flex: 0 1 auto;
+}
