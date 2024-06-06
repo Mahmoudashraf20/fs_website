@@ -1,0 +1,8 @@
+.bg-cat{
+    background-image: url('/image/bg-1.jpg');
+    background-size:     contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-wrap:wrap;
+
+}
