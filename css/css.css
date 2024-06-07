@@ -2,7 +2,7 @@
     margin: 0;
     background-color: none;
     /* to go to id smothly not one time */
-    scroll-behavior:inherit;
+    scroll-behavior:smooth;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .content-section {
-    margin-top: 20px;
-    padding: 60px 0;
-    background-color:aquamarine;
+    
+    padding: 10% 0 0 0;
+    background-color:#444444;
 }
 
 .content-section .text-content {
-    color: white;
+    color: black;
     display: flex;
     margin-left: -90px;
     flex-direction: column;
@@ -403,6 +403,9 @@
     background-size:100%;
 }
 /* ///////////////////// footer ///////////////////////////// */
+footer{
+    box-shadow: 0px -29px 29px -9px rgba(0,0,0,0.1);
+}
 .footer-style{
     background-color: #35297f;
 }
@@ -414,4 +417,5 @@
 }
 .custom-sm{
     font-size: 20px;
+    box-shadow: 0px 34px 28px 0px rgba(0,0,0,0.1);
 }
