@@ -366,7 +366,8 @@
     text-align: center;
     box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
     padding: 20px 0 30px 0;
-  }
+    margin-right: 20px;
+}
   
   .contact .info-box i {
     font-size: 32px;
@@ -394,18 +395,30 @@
   }
 
   .section-title h2{
-    margin-top: 15%;
+    margin-top: 5%;
     font-weight: 800;
     font-size: 30px;
 
   }
   .image-show{
+    min-height: 350px;
     height: 100%;
     background-image: url("../image/contact.jpg");
     background-attachment:inherit;
     background-repeat: no-repeat;
     background-size:100%;
 }
+/* Styles for smaller screens (e.g., phones) */
+@media only screen and (max-width: 600px) {
+    .image-show {
+      margin-top: 25px;
+      min-height: 200px;
+      background-image: url("../image/contact.jpg");
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 /* ///////////////////// footer ///////////////////////////// */
 footer{
     box-shadow: 0px -29px 29px -9px rgba(0,0,0,0.1);
@@ -523,7 +536,7 @@ body {
 
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
   }
   
   .section-title h2 {
@@ -560,4 +573,62 @@ body {
     .hide-el {
         display: none;
     }
+}
+
+/* ///////////////// certificate //////////// */
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.gallery-lightbox :hover{
+
+}
+
+
+  .language-switcher {
+
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  /* //////////////////////// certificate ///////////////////////////// */
+  .image-show2{
+    min-height: 350px;
+    height: 100%;
+    background-image: url("../image/catalog.jpg");
+    background-attachment:inherit;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+/* Styles for smaller screens (e.g., phones) */
+@media only screen and (max-width: 600px) {
+    .image-show2 {
+      margin-top: 25px;
+      min-height: 200px;
+      background-image: url("../image/catalog.jpg");
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .btndown {
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+    background: #35297f;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+.btndown:hover {
+    background: #65c9cd;
+    color: #fff;
 }
