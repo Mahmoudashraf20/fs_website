@@ -2,37 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Shape</title>
+    <title>Google Translation</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <style>
-        .custom-shape {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #fff;
-            overflow: hidden;
-            margin: 50px auto;
+        #google_translate_element {
+            display: block; /* Keep the translate element visible */
         }
-        .custom-shape::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('../image/bag.jpg') no-repeat center center / cover;
-            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
         }
-        .custom-shape img {
-            width: 100%;
-            height: auto;
-            clip-path: ellipse(70% 50% at 50% 50%);
+        body {
+            top: 0px !important;
         }
     </style>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ar,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                multilanguagePage: true,
+                autoDisplay: false
+            }, 'google_translate_element');
+
+            setInterval(() => {
+                const language = $(".goog-te-menu-value span").text();
+                if (language.includes("Arabic") || document.documentElement.lang === 'ar') {
+                    $('#theContent').css('direction', 'rtl');
+                } else {
+                    $('#theContent').css('direction', 'ltr');
+                }
+                hideGoogleTranslateTopBar();
+            }, 1000);
+        }
+
+        function hideGoogleTranslateTopBar() {
+            const iframe = document.querySelector('.goog-te-banner-frame');
+            if (iframe) {
+                iframe.style.display = 'none';
+            }
+            const googleTranslateFrame = document.querySelector('.goog-te-menu-frame');
+            if (googleTranslateFrame) {
+                googleTranslateFrame.style.display = 'none';
+            }
+            document.body.style.top = '0px';
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <div class="custom-shape">
-        <img src="../image/bag3.jpg" alt="Custom Shape">
+    <div id="theContent">
+        <div id="google_translate_element"></div>
+        <div style="border:0px dotted #ccc; padding:3px 3px 3px 0px; background-color:none; margin:7px 0 7px 0;"></div>
+        <h1>Site is down, under development. Reach you soon.</h1>
     </div>
 </body>
 </html>
