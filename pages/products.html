@@ -1,207 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/css.css">
-    <link rel="stylesheet" href="../css/hover-min.css">
-    <link rel="stylesheet" href="../css/hover.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  /* Add your custom styles here */
+  .card-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+  }
+  .non-show{display: none;
+
+  }
+
+  .card {
+    display: inline-block;
+    width: 300px; /* Adjust as needed */
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .scroll-buttons {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #modalImage{
+    width: 100%;
+   
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
-    
 
+<div class="container mt-5">
+  <h1 class="text-center">Products</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-nav mx-auto">
+          <button id="btnProduct1" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 1</button>
+          <button id="btnProduct2" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 2</button>
+          <button id="btnProduct3" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 3</button>
+          <button id="btnProduct4" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 4</button>
+          <button id="btnProduct5" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 5</button>
+          <button id="btnProduct6" class="btn btn-outline-primary mx-2 hvr-radial-out">Product 6</button>
+      </div>
+  </nav>
+  <div id="productContainer" class="mt-4 row">
+      <!-- Product cards will be inserted here dynamically -->
+  </div>
+</div>
 
-
-  
- 
-    <nav class="navbar navbar-expand-lg navbar-black bg-black ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"><img src="" alt=""
-              style="width: 100px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/about.html">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active text-white" href="../pages/products.html" id="navbarScrollingDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  products
-                </a>
-                <ul class="dropdown-menu text-white" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="../pages/products.html">section1</a></li>
-                  <li><a class="dropdown-item" href="../pages/products.html">section2</a></li>
-                  <li><a class="dropdown-item" href="../pages/products.html">section3</a></li>
-                  <li><a class="dropdown-item" href="../pages/products.html">section4</a></li>
-                  <li><a class="dropdown-item" href="../pages/products.html">section5</a></li>
-                  <li><a class="dropdown-item" href="../pages/products.html">section6</a></li>
-                  
-    
-                  <li>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-white" href="../pages/contact.html">Contact Us</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-white" href="../pages/catalog.html">Catalog</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-white" href="../pages/certificates.html">Certificates</a>
-            </ul>
-    
-          </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="row">
+        <div class="col-lg-4">
+          <img id="modalImage" src="" class="img-fluid" alt="Product Image">
         </div>
-      </nav>
-
-
-
-
-
-
-productsrrr
-
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer class="text-center text-lg-start bg-black text-muted">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block text-white">
-        <span>Contact us with social media</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="#" class="me-4 text-reset text-decoration-none">
-          <i class="fab fa-facebook-f text-white"></i>
-        </a>
-
-        <a href="#" class="me-4 text-reset text-decoration-none">
-          <i class="fab fa-google text-white"></i>
-        </a>
-        <a href="#" class="me-4 text-reset text-decoration-none">
-          <i class="fab fa-instagram text-white"></i>
-        </a>
-        <a href="#" class="me-4 text-reset text-decoration-none">
-          <i class="fab fa-linkedin text-white"></i>
-        </a>
-
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4 text-white">
-              <i id="" class="fa-solid fa-book-open text-white"></i> </i>fss
-            </h6>
-            <h6 class="text-uppercase fw-bold mb-4 text-white">
-                Translat</h6>
-             
-                <br>
-              <div id="google_translate_element"></div>
-  
-              <script type="text/javascript">
-                function googleTranslateElementInit() {
-                  new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-                }
-              </script>
-  
-              <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-              <p>
-                <a href="#!" class=" text-decoration-none text-white">Arabic</a>
-              </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-white">
-              Products
-            </h6>
-
-            <p>
-              <a href="#!" class=" text-decoration-none text-white"> Scetion1 </a>
-            </p>
-            <p>
-              <a href="#!" class=" text-decoration-none text-white"> Scetion2</a>
-            </p>
-            <p>
-              <a href="#!" class=" text-decoration-none text-white"> Scetion3 </a>
-            </p>
-            
-          </div>
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><br><br>
-            <p>
-                <a href="#!" class=" text-decoration-none text-white"> Scetion4</a>
-              </p>
-              <p>
-                <a href="#!" class=" text-decoration-none text-white"> Scetion5</a>
-              </p>
-              <p>
-                <a href="#!" class=" text-decoration-none text-white"> Scetion6</a>
-              </p>
-          </div>
-          
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div id="cont" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-white">Contact us</h6>
-            <a class="text-decoration-none  text-white" href="https://maps.app.goo.gl/LTd9CUy1X71uFNMo7"><p>Location<i class="fas fa-home me-3"></i></p></a>
-            <p class="text-white">
-              fss@gmail.com
-              <i class="fas fa-envelope me-3 text-white"></i>
-            </p>
-            <p class="text-white"> +20 11 24 350 313<i class="fas fa-phone me-3 text-white"></i></p>
-            <p class="text-white">فاكس +20 12 89 685 068 <i class="fas fa-print me-3 text-white"></i> </p>
-          </div>
-          <!-- Grid column -->
+        <div class="col-lg-8">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDescription"></p>
+          <p id="modalPrice"></p>
         </div>
-        <!-- Grid row -->
       </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
-      2023 © Copyright:
-      <a class="text-reset fw-bold text-decoration-none text-white" href="">Ashroofaa&Mohey_Eldeen.com</a>
     </div>
-  </footer>
+  </div>
+  
 
+<script>
+  const productSections = {
+    product1: [
+      {
+        name: 'Product 1A',
+        description: 'This is the description for product 1A.This is the description for product 1A.This is the description for product 1A.This is the description for product 1A.<br>This is the description for product 1A.This is the description for product 1A.',
+        price: '$10',
+        imageUrl: '../image/bag.jpg'
+      },
+      {
+        name: 'Product 1B',
+        description: 'This is the description for product 1B.',
+        price: '$15',
+        imageUrl: '../image/bag.jpg'
+      }
+    ],
+    product2: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product3: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product4: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product5: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    // Add other product sections here
+  };
 
+  const displayProducts = (products) => {
+    const productContainer = document.getElementById('productContainer');
+    productContainer.innerHTML = products.map(product => `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
+          <div class="card-body ">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text non-show">${product.description}</p>
+            <p class="card-text"><strong>Price: ${product.price}</strong></p>
+            <button class="btn btn-primary btn-sm" onclick="showProductDetails('${product.name}', '${product.description}', '${product.price}', '${product.imageUrl}')">Details</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  };
 
-    <script src="../js/all.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/js_m.js"></script>
+  const showProductDetails = (name, description, price, imageUrl) => {
+    const modal = document.getElementById('myModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalPrice = document.getElementById('modalPrice');
+
+    modalImage.src = imageUrl;
+    modalTitle.textContent = name;
+    modalDescription.textContent = description;
+    modalPrice.textContent = `Price: ${price}`;
+
+    modal.style.display = 'block';
+  };
+
+  // Close the modal when the user clicks the close button or outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+
+  document.getElementsByClassName('close')[0].onclick = function() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  };
+  document.getElementById('btnProduct1').addEventListener('click', () => {
+    displayProducts(productSections.product1);
+  });
+  document.getElementById('btnProduct2').addEventListener('click', () => {
+    displayProducts(productSections.product2);
+  });
+  document.getElementById('btnProduct3').addEventListener('click', () => {
+    displayProducts(productSections.product3);
+  });
+  document.getElementById('btnProduct4').addEventListener('click', () => {
+    displayProducts(productSections.product4);
+  });
+  document.getElementById('btnProduct5').addEventListener('click', () => {
+    displayProducts(productSections.product5);
+  });
+  document.getElementById('btnProduct6').addEventListener('click', () => {
+    displayProducts(productSections.product6);
+  });
+
+  // Initial display
+  displayProducts(productSections.product1);
+</script>
+
 </body>
 </html>

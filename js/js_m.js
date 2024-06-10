@@ -177,3 +177,666 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     document.title = translations[lang].title;
   }
   
+  //////////////////////////////////////
+  
+// JavaScript to handle switching products
+document.addEventListener('DOMContentLoaded', (event) => {
+  const productContainer = document.getElementById('productContainer');
+
+
+///////////////////////////////////////////////////////////////////
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image within the card and insert it inside the modal - use its "alt" text as a caption
+var cards = document.querySelectorAll(".card");
+cards.forEach(function(card) {
+  var img = card.querySelector(".card-img-top");
+  var modalImg = modal.querySelector(".modal-content img");
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+});
+
+// Get the <span> element that closes the modal
+var span = document.querySelector(".close");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+  
+// Call the setupModal function when the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+  setupModal();
+});
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+  const productSections = {
+    product1: [
+      {
+        name: 'Product 1A',
+        description: 'This is the description for product 1A.',
+        price: '$10',
+        imageUrl: '../image/bag.jpg'
+      },
+      {
+        name: 'Product 1B',
+        description: 'This is the description for product 1B.',
+        price: '$15',
+        imageUrl: '../image/bag.jpg'
+      }
+    ],
+    product2: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product3: [
+      {
+        name: 'Product 3A',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product4: [
+      {
+        name: 'Product 4444',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product5: [
+      {
+        name: 'Product 5555',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product6: [
+      {
+        name: 'Product 66',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ]
+  };
+
+  const displayProducts = (products) => {
+    const productContainer = document.getElementById('productContainer');
+    productContainer.innerHTML = products.map(product => `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text"><strong>Price: ${product.price}</strong></p>
+            <button class="btn btn-primary btn-sm" onclick="showProductDetails('${product.name}', '${product.description}', '${product.price}', '${product.imageUrl}')">Details</button>
+          </div>
+        </div>
+      </div>  
+    `).join('');
+  };
+  const showProductDetails = (name, description, price, imageUrl) => {
+    const modal = document.getElementById('myModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalPrice = document.getElementById('modalPrice');
+
+    modalImage.src = imageUrl;
+    modalTitle.textContent = name;
+    modalDescription.textContent = description;
+    modalPrice.textContent = `Price: ${price}`;
+
+    modal.style.display = 'block';
+  };
+
+  // Close the modal when the user clicks the close button or outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+  document.getElementsByClassName('close')[0].onclick = function() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  };
+
+
+
+  document.getElementById('btnProduct1').addEventListener('click', () => {
+    displayProducts(productSections.product1);
+  });
+  document.getElementById('btnProduct2').addEventListener('click', () => {
+    displayProducts(productSections.product2);
+  });
+  document.getElementById('btnProduct3').addEventListener('click', () => {
+    displayProducts(productSections.product3);
+  });
+  document.getElementById('btnProduct4').addEventListener('click', () => {
+    displayProducts(productSections.product4);
+  });
+  document.getElementById('btnProduct5').addEventListener('click', () => {
+    displayProducts(productSections.product5);
+  });
+  document.getElementById('btnProduct6').addEventListener('click', () => {
+    displayProducts(productSections.product6);
+  });
+
+  // Initial display
+  displayProducts(productSections.product1);
+});
+            
+
+
+
+// --------------------------------------------------------------------
+
+// JavaScript to handle switching products
+document.addEventListener('DOMContentLoaded', (event) => {
+  const productContainer = document.getElementById('productContainer');
+
+
+///////////////////////////////////////////////////////////////////
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image within the card and insert it inside the modal - use its "alt" text as a caption
+var cards = document.querySelectorAll(".card");
+cards.forEach(function(card) {
+  var img = card.querySelector(".card-img-top");
+  var modalImg = modal.querySelector(".modal-content img");
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+});
+
+// Get the <span> element that closes the modal
+var span = document.querySelector(".close");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+  
+// Call the setupModal function when the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+  setupModal();
+});
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+  const productSections = {
+    product1: [
+      {
+        name: 'Product 1A',
+        description: 'This is the description for product 1A.',
+        price: '$10',
+        imageUrl: '../image/bag.jpg'
+      },
+      {
+        name: 'Product 1B',
+        description: 'This is the description for product 1B.',
+        price: '$15',
+        imageUrl: '../image/bag.jpg'
+      }
+    ],
+    product2: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product3: [
+      {
+        name: 'Product 3A',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product4: [
+      {
+        name: 'Product 4444',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product5: [
+      {
+        name: 'Product 5555',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product6: [
+      {
+        name: 'Product 66',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ]
+  };
+
+  const displayProducts = (products) => {
+    const productContainer = document.getElementById('productContainer');
+    productContainer.innerHTML = products.map(product => `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text"><strong>Price: ${product.price}</strong></p>
+            <button class="btn btn-primary btn-sm" onclick="showProductDetails('${product.name}', '${product.description}', '${product.price}', '${product.imageUrl}')">Details</button>
+          </div>
+        </div>
+      </div>  
+    `).join('');
+  };
+  const showProductDetails = (name, description, price, imageUrl) => {
+    const modal = document.getElementById('myModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalPrice = document.getElementById('modalPrice');
+
+    modalImage.src = imageUrl;
+    modalTitle.textContent = name;
+    modalDescription.textContent = description;
+    modalPrice.textContent = `Price: ${price}`;
+
+    modal.style.display = 'block';
+  };
+
+  // Close the modal when the user clicks the close button or outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+  document.getElementsByClassName('close')[0].onclick = function() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  };
+
+
+
+  document.getElementById('btnProduct1').addEventListener('click', () => {
+    displayProducts(productSections.product1);
+  });
+  document.getElementById('btnProduct2').addEventListener('click', () => {
+    displayProducts(productSections.product2);
+  });
+  document.getElementById('btnProduct3').addEventListener('click', () => {
+    displayProducts(productSections.product3);
+  });
+  document.getElementById('btnProduct4').addEventListener('click', () => {
+    displayProducts(productSections.product4);
+  });
+  document.getElementById('btnProduct5').addEventListener('click', () => {
+    displayProducts(productSections.product5);
+  });
+  document.getElementById('btnProduct6').addEventListener('click', () => {
+    displayProducts(productSections.product6);
+  });
+
+  // Initial display
+  displayProducts(productSections.product1);
+});
+            
+
+
+
+// -----------------------------------khara------------
+
+// JavaScript to handle switching products
+document.addEventListener('DOMContentLoaded', (event) => {
+  const productContainer = document.getElementById('productContainer');
+
+
+///////////////////////////////////////////////////////////////////
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image within the card and insert it inside the modal - use its "alt" text as a caption
+var cards = document.querySelectorAll(".card");
+cards.forEach(function(card) {
+  var img = card.querySelector(".card-img-top");
+  var modalImg = modal.querySelector(".modal-content img");
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+});
+
+// Get the <span> element that closes the modal
+var span = document.querySelector(".close");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+  
+// Call the setupModal function when the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+  setupModal();
+});
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+  const productSections = {
+    product1: [
+      {
+        name: 'Product 1A',
+        description: 'This is the description for product 1A.',
+        price: '$10',
+        imageUrl: '../image/bag.jpg'
+      },
+      {
+        name: 'Product 1B',
+        description: 'This is the description for product 1B.',
+        price: '$15',
+        imageUrl: '../image/bag.jpg'
+      }
+    ],
+    product2: [
+      {
+        name: 'Product 2A',
+        description: 'This is the description for product 2A.',
+        price: '$20',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 2B',
+        description: 'This is the description for product 2B.',
+        price: '$25',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product3: [
+      {
+        name: 'Product 3A',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product4: [
+      {
+        name: 'Product 4444',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product5: [
+      {
+        name: 'Product 5555',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ],
+    product6: [
+      {
+        name: 'Product 66',
+        description: 'This is the description for product 3A.',
+        price: '$30',
+        imageUrl: 'https://via.placeholder.com/150'
+      },
+      {
+        name: 'Product 3B',
+        description: 'This is the description for product 3B.',
+        price: '$35',
+        imageUrl: 'https://via.placeholder.com/150'
+      }
+    ]
+  };
+
+  const displayProducts = (products) => {
+    const productContainer = document.getElementById('productContainer');
+    productContainer.innerHTML = products.map(product => `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text"><strong>Price: ${product.price}</strong></p>
+            <button class="btn btn-primary btn-sm" onclick="showProductDetails('${product.name}', '${product.description}', '${product.price}', '${product.imageUrl}')">Details</button>
+          </div>
+        </div>
+      </div>  
+    `).join('');
+  };
+  const showProductDetails = (name, description, price, imageUrl) => {
+    const modal = document.getElementById('myModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalPrice = document.getElementById('modalPrice');
+
+    modalImage.src = imageUrl;
+    modalTitle.textContent = name;
+    modalDescription.textContent = description;
+    modalPrice.textContent = `Price: ${price}`;
+
+    modal.style.display = 'block';
+  };
+
+  // Close the modal when the user clicks the close button or outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+  document.getElementsByClassName('close')[0].onclick = function() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  };
+
+
+
+  document.getElementById('btnProduct1').addEventListener('click', () => {
+    displayProducts(productSections.product1);
+  });
+  document.getElementById('btnProduct2').addEventListener('click', () => {
+    displayProducts(productSections.product2);
+  });
+  document.getElementById('btnProduct3').addEventListener('click', () => {
+    displayProducts(productSections.product3);
+  });
+  document.getElementById('btnProduct4').addEventListener('click', () => {
+    displayProducts(productSections.product4);
+  });
+  document.getElementById('btnProduct5').addEventListener('click', () => {
+    displayProducts(productSections.product5);
+  });
+  document.getElementById('btnProduct6').addEventListener('click', () => {
+    displayProducts(productSections.product6);
+  });
+
+  // Initial display
+  displayProducts(productSections.product1);
+});
+            
