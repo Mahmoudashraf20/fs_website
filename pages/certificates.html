@@ -101,7 +101,7 @@
       </div>
       
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  mt-4">
           <div class="col-xl-3 col-lg-6 align-self-center">
             <a class="gallery-lightbox" href="/image/cer.jpg">
               <img src="/image/cer.jpg" class="img-fluid" alt="">
@@ -111,9 +111,7 @@
             <a class="gallery-lightbox" href="/image/cer.jpg">
               <img src="/image/cer.jpg" class="img-fluid" alt="Image description">
             </a>
-            <!-- <h3 align="center">hello0</h3> -->
-             <!-- ///////////////////////could be there update////////////////////// -->
-          </div>
+            </div>
           <div class="col-xl-3 col-lg-6 align-self-center">
             <a class="gallery-lightbox" href="/image/cer.jpg">
               <img src="/image/cer.jpg" class="img-fluid" alt="Image description">
@@ -140,90 +138,14 @@
             </a>
           </div>
         </div>
-        <div class="language-switcher">
-          <button id="languageButton" class="btn btn-primary">Switch to Arabic</button>
-        </div>
+
       </div>
   </section>
-      <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-      <script>
-
-      </script>
 
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,ar'
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const languageButton = document.getElementById('languageButton');
-    const translations = {
-      en: {
-        title: "English",
-        headline: "Welcome",
-        description: "This is an example text in English."
-      },
-      ar: {
-        title: "عربي",
-        headline: "مرحبا",
-        description: "هذا نص تجريبي باللغة العربية."
-      }
-    };
 
-    languageButton.addEventListener('click', () => {
-      const currentLang = document.documentElement.lang;
 
-      if (currentLang === 'en') {
-        // Switch to Arabic
-        document.documentElement.lang = 'ar';
-        document.body.dir = 'rtl';
-        languageButton.textContent = 'Switch to English';
-        switchToLanguage('ar');
-      } else {
-        // Switch to English
-        document.documentElement.lang = 'en';
-        document.body.dir = 'ltr';
-        languageButton.textContent = 'Switch to Arabic';
-        switchToLanguage('en');
-      }
-    });
 
-    function switchToLanguage(lang) {
-      const elementsToTranslate = document.querySelectorAll('[data-translate-key]');
-
-      elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('data-translate-key');
-        if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
-        }
-      });
-
-      document.title = translations[lang].title;
-
-      if (lang === 'ar') {
-        googleTranslateElementInit();
-        const select = document.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = 'ar';
-          select.dispatchEvent(new Event('change'));
-        }
-      } else {
-        const iframe = document.querySelector('.goog-te-banner-frame');
-        if (iframe) {
-          const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-          const closeButton = innerDoc.querySelector('.goog-close-link');
-          if (closeButton) closeButton.click();
-        }
-      }
-    }
-  });
-</script>
 
 
 
@@ -317,58 +239,7 @@
   <script src="../js/all.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="/"></script>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ar'
-      }, 'google_translate_element');
-    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-const lightbox = GLightbox({
-  selector: 'a.gallery-lightbox'
-});
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = GLightbox({
-      selector: 'a.gallery-lightbox'
-    });
-  
-    const languageButton = document.getElementById('languageButton');
-  
-    languageButton.addEventListener('click', () => {
-      const currentLang = document.documentElement.lang;
-  
-      if (currentLang === 'en') {
-        // Switch to Arabic
-        document.documentElement.lang = 'ar';
-        document.body.dir = 'rtl';
-        languageButton.textContent = 'Switch to English';
-        switchToArabic();
-      } else {
-        // Switch to English
-        document.documentElement.lang = 'en';
-        document.body.dir = 'ltr';
-        languageButton.textContent = 'Switch to Arabic';
-        switchToEnglish();
-      }
-    });
-  });
-  
-  function switchToArabic() {
-    // Change text content or any other necessary elements to Arabic
-    document.title = 'عربي';
-    // Add more translations as needed
-  }
-  
-  function switchToEnglish() {
-    // Change text content or any other necessary elements to English
-    document.title = 'English';
-    // Add more translations as needed
-  }
-  
-  </script>
 </body>
 
 </html>

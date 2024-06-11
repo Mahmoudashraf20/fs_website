@@ -543,7 +543,7 @@ body {
   .section-title h2 {
     font-size: 32px;
     font-weight: bold;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -649,6 +649,44 @@ body {
 }
 
 /* ////////////////////////// index//////////////////////////// */
+.card-body h5{
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.section-title-ind h2{
+  font-weight: 800;
+  font-size: 30px;
+
+}
+.section-title-ind {
+  text-align: center;
+  /* padding-bottom: 30px; */
+}
+
+.section-title-ind h2 {
+  font-size: 32px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  /* margin-bottom: 20px; */
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.section-title-ind h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #3fbbc0;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title-ind p {
+  margin-bottom: 0;
+}
 .animated-image {
     position: relative;
     animation: moveUpDown 3s ease-in-out infinite;
@@ -908,7 +946,7 @@ section,
 .section {
     color: var(--default-color);
     background-color: var(--background-color);
-    padding: 60px 0;
+    /* padding: 60px 0; */
     scroll-margin-top: 92px;
     overflow: hidden;
 }
@@ -1009,7 +1047,7 @@ section,
         position: absolute;
         top: 0;
         right: 0;
-        min-height: 600px;
+        min-height: 500px;
     }
 }
 
@@ -1024,10 +1062,14 @@ section,
     z-index: 1;
     border-radius: 10px;
 }
+.card-item{
+margin-bottom: 20px;
+}
 
 .card-item .card-bg {
   min-height: 300px;
   position: relative;
+  margin-right: 20px;
 }
 
 .card-item .card-bg img {
@@ -1199,3 +1241,73 @@ section,
   text-decoration: none;
   cursor: pointer;
 }
+
+/* ------------------------- products -------------------------- */
+.products-sec{
+  padding-top: 12%;
+}
+
+/* ---------------------------products--------------------------------- */
+  /* Add your custom styles here */
+  .card-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+  }
+  .non-show{display: none;
+
+  }
+
+  .card {
+    display: inline-block;
+    width: 300px; /* Adjust as needed */
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .scroll-buttons {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #modalImage{
+    width: 100%;
+   
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
