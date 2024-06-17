@@ -12,6 +12,24 @@ const productSections = {
         description: "it is designed to allow fluid (liquid or gas) to flow through them in only one direction. They are commonly used in applications where backflow could cause damage or disrupt the system, such as in water and sewage systems, oil and gas pipelines, and various industrial processes.",
         price: '$15',
         imageUrl: '../image/v2.jpg'
+      },
+      {
+        name: 'butterfly valve 1',
+        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        price: 'X',
+        imageUrl: '../image/v5.png'
+      },
+      {
+        name: 'butterfly valve 2',
+        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        price: 'x',
+        imageUrl: '../image/v6.png'
+      },
+      {
+        name: 'butterfly valve 3',
+        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        price: 'x',
+        imageUrl: '../image/v7.png'
       }
     ],
     product2: [
@@ -19,21 +37,33 @@ const productSections = {
         name: 'Bend',
         description: ' a pipe fitting that is used to change the direction of the flow within a piping system. Here are some key points about bends, can have a large radius or small radius, affecting the flow characteristics. A long-radius bend provides a smoother change in direction and reduces pressure loss compared to a short-radius bend',
         price: 'x',
-        imageUrl: '../image/v3.jpg'
+        imageUrl: '../image/f2.png'
       },
       {
         name: 'Bend2',
         description: ' a pipe fitting that is used to change the direction of the flow within a piping system. Here are some key points about bends, can have a large radius or small radius, affecting the flow characteristics. A long-radius bend provides a smoother change in direction and reduces pressure loss compared to a short-radius bend',
         price: 'x',
-        imageUrl: '../image/v3.jpg'
+        imageUrl: '../image/f4.png'
       }
     ],
     product3: [
       {
+        name: 'square Cover',
+        description: 'This is the description for product 2A.',
+        price: 'X',
+        imageUrl: '../image/f7.png'
+      },
+      {
         name: 'Cover',
         description: 'This is the description for product 2A.',
         price: 'X',
-        imageUrl: '../image/v4.jpg'
+        imageUrl: '../image/f9.png'
+      },
+      {
+        name: 'Cover',
+        description: 'This is the description for product 2A.',
+        price: 'X',
+        imageUrl: '../image/f10.png'
       }
     ],
     product4: [
@@ -58,10 +88,16 @@ const productSections = {
     ],
     product5: [
       {
-        name: 'Reducer',
+        name: 'Reducer 1',
         description: 'it is a pipe fitting used in piping systems to connect two pipes of different diameters. It facilitates a smooth transition from a larger pipe to a smaller one (or vice versa), thereby managing flow rates, pressure, and fluid dynamics effectively. Reducers are crucial in maintaining the integrity of the piping system and ensuring efficient fluid transport',
         price: 'x',
-        imageUrl: '../image/v8.jpg'
+        imageUrl: '../image/f1.jpg'
+      },
+      {
+        name: 'Reducer 2',
+        description: 'it is a pipe fitting used in piping systems to connect two pipes of different diameters. It facilitates a smooth transition from a larger pipe to a smaller one (or vice versa), thereby managing flow rates, pressure, and fluid dynamics effectively. Reducers are crucial in maintaining the integrity of the piping system and ensuring efficient fluid transport',
+        price: 'x',
+        imageUrl: '../image/f3.png'
       }
     ],
     product6: [
@@ -120,14 +156,26 @@ const productSections = {
         description: 'This is cylindrical conduits used for transporting fluids (liquids and gases) from one location to another. They are essential components in a wide range of industries, including water supply, wastewater treatment, oil and gas, chemical processing, and HVAC systems. Pipes come in various materials, sizes, and specifications to meet the needs of different applications',
         price: 'x',
         imageUrl: '../image/p11.jpg'
-      }
-    ],
-    product8: [
+      },
       {
         name: 'Puddle with flanged',
         description: 'known as a puddle pipe or puddle collar, is a type of pipe fitting used to prevent water from seeping along the outside of a pipe that passes through concrete structures like walls, floors, or slabs. Puddle flanges are particularly useful in applications where pipes need to penetrate waterproof concrete structures, such as in basements, swimming pools, and water treatment plants',
         price: 'x',
         imageUrl: '../image/p12.jpg'
+      }
+    ],
+    product8: [
+      {
+        name: 'Pillar Fire Hydrant',
+        description: 'an above-ground fire hydrant, is a type of hydrant used for providing water supply in firefighting operations. This type of hydrant is designed to be mounted above the ground for easy access by firefighters. It is typically used in urban and suburban areas where quick access to a reliable water source is crucial in the event of a fire.',
+        price: 'x',
+        imageUrl: '../image/f5.png'
+      },
+      {
+        name: 'Pillar Fire Hydrant',
+        description: 'an above-ground fire hydrant, is a type of hydrant used for providing water supply in firefighting operations. This type of hydrant is designed to be mounted above the ground for easy access by firefighters. It is typically used in urban and suburban areas where quick access to a reliable water source is crucial in the event of a fire.',
+        price: 'x',
+        imageUrl: '../image/f6.png'
       }
     ]
     // Add other product sections here
