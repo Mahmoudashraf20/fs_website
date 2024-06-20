@@ -61,29 +61,29 @@ const productSections = {
       },
       {
         name: 'Cover',
-        description: 'This is the description for product 2A.',
+        description: ' flanged socket is a type of mechanical fitting used to connect pipes, hoses, or other cylindrical objects. It features a flange, which is a flat, protruding rim or collar that extends from the body of the socket. The flange usually contains holes for bolts or screws, allowing the socket to be securely attached to another surface, such as a pipe flange, valve, or a piece of machinery',
         price: 'X',
         imageUrl: '../image/f10.png'
       }
     ],
     product4: [
       {
-        name: 'butterfly valve 1',
-        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        name: 'Flanged sockets 1',
+        description: ' flanged socket is a type of mechanical fitting used to connect pipes, hoses, or other cylindrical objects. It features a flange, which is a flat, protruding rim or collar that extends from the body of the socket. The flange usually contains holes for bolts or screws, allowing the socket to be securely attached to another surface, such as a pipe flange, valve, or a piece of machinery',
         price: 'X',
-        imageUrl: '../image/v5.png'
+        imageUrl: '../image/g1.png'
       },
       {
-        name: 'butterfly valve 2',
-        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        name: 'Flanged sockets 2',
+        description: ' flanged socket is a type of mechanical fitting used to connect pipes, hoses, or other cylindrical objects. It features a flange, which is a flat, protruding rim or collar that extends from the body of the socket. The flange usually contains holes for bolts or screws, allowing the socket to be securely attached to another surface, such as a pipe flange, valve, or a piece of machinery',
         price: 'x',
-        imageUrl: '../image/v6.png'
+        imageUrl: '../image/g2.png'
       },
       {
-        name: 'butterfly valve 3',
-        description: 'Thisis a type of flow control device used to regulate or isolate fluid flow within a pipeline. It is known for its quick operation and compact design. Here are some key points about butterfly valves',
+        name: 'Flanged sockets 3',
+        description: ' flanged socket is a type of mechanical fitting used to connect pipes, hoses, or other cylindrical objects. It features a flange, which is a flat, protruding rim or collar that extends from the body of the socket. The flange usually contains holes for bolts or screws, allowing the socket to be securely attached to another surface, such as a pipe flange, valve, or a piece of machinery',
         price: 'x',
-        imageUrl: '../image/v7.png'
+        imageUrl: '../image/g3.png'
       }
     ],
     product5: [
@@ -184,7 +184,8 @@ const productSections = {
   const displayProducts = (products) => {
     const productContainer = document.getElementById('productContainer');
     productContainer.innerHTML = products.map(product => `
-      <div class="col-md-4 mb-4">
+      <div class="col mb-4 justify-content-sm-between">
+      <center>
         <div class="card">
           <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
           <div class="card-body ">
@@ -194,6 +195,7 @@ const productSections = {
             <button class="btn btn-primary btn-sm" onclick="showProductDetails('${product.name}', '${product.description}', '${product.price}', '${product.imageUrl}')">Details</button>
           </div>
         </div>
+        </center>
       </div>
     `).join('');
   };
@@ -208,7 +210,7 @@ const productSections = {
     modalImage.src = imageUrl;
     modalTitle.textContent = name;
     modalDescription.textContent = description;
-    modalPrice.textContent = `Price: ${price}`;
+    modalPrice.textContent = ``;
 
     modal.style.display = 'block';
   };
