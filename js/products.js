@@ -253,28 +253,18 @@ const productSections = {
   });
 
   // Initial display
-  displayProducts(productSections.product1);
+  // displayProducts(productSections.product1);
 
-//   const productSections = {
-//     product1: 'Valves',
-//     product2: 'Bend',
-//     product3: 'Cover',
-//     product4: 'Butterfly and sluice valves',
-//     product5: 'Reducer',
-//     product6: 'Tee',
-//     product7: 'Flanged Pipes',
-//     product8: 'Puddle with Flanged'
-// };
+  // Function to get query parameters
+function getQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('product');
+}
 
-// function displayProducts(product) {
-//     console.log('Displaying products for:', product);
-//     // Your function logic here
-// }
-
-// document.querySelectorAll('.dropdown-item').forEach(item => {
-//     item.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         const productKey = this.getAttribute('data-product');
-//         displayProducts(productSections[productKey]);
-//     });
-// });
+// When the page loads, check for a product query parameter and display the product
+window.onload = function() {
+  const productKey = getQueryParams();
+  if (productKey && productSections[productKey]) {
+      displayProducts(productSections[productKey]);
+  }
+};
