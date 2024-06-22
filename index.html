@@ -27,13 +27,6 @@
 
   <!-- //////////////////// -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.0.9/css/glightbox.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -54,54 +47,53 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top navbar-expand-lg">
-    <div class="container d-flex align-items-center">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="index.html" class="logo me-auto"><img src="image/logo2.png" alt=""></a>
+    <div class="">
+      <nav class="navbar navbar-expand-lg m-4 ms-5">
+        <a href="index.html" class="logo me-auto"><img src="image/logo2.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="li-alii navbar-nav mt-2 mt-lg-0 d-flex justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html"><b>About</b></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="pages/products.html" id="navbarScrollingDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Products</b>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product1">Valves</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product2">Bend</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product3">Cover</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product4">Flanged Socket</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product6">Tee</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product7">Flanged Pipes</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product8">Pillar Fire Hydrant</a></li>
+                    <li><a class="dropdown-item" href="pages/products.html" data-product="product5">Reducer</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/catalog.html"><b>Catalog</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/certificates.html"><b>Certificates</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/clients.html"><b>Our clients</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contact.html"><b>Contact Us</b></a>
+            </li>
+          </ul> 
+        </div>
+      </nav>
 
-      <nav id="navbar" class="navbar order-last navbar-expand-lg order-lg-0">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/about.html"><b>About</b></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="pages/products.html" id="navbarScrollingDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <b>Products</b>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product1">Valves</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product2">Bend</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product3">Cover</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product4">Flanged Socket</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product6">Tee</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product7">Flanged Pipes</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product8">Pillar Fire Hydrant</a></li>
-                  <li><a class="dropdown-item" href="pages/products.html" data-product="product5">Reducer</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/catalog.html"><b>Catalog</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/certificates.html"><b>Certificates</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/clients.html"><b>Our clients</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/contact.html"><b>Contact Us</b></a>
-          </li>
-        </ul>
-        <!-- ////////////// toggle button ///////////// -->
-        <i class="bi bi-list mobile-nav-toggle d-xl-none navbarScrollingDropdown"></i>
-      </nav><!-- .navbar -->
-
-      <!-- <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a> -->
     </div>
   </header><!-- ////////////////////////////////End Header///////////////////////////// -->
 
@@ -343,6 +335,35 @@
       </div>
     </div>
   </div>
+
+
+
+  <!-- ////////////////////////////////// section 5 //////////////////////////////// -->
+<div class="container section-title mb-5" data-aos="fade-up">
+  <h2>Our clients</h2>
+  <p>Successful projects begin with a clear vision and charatarisic like:</p>
+</div><!-- End Section Title -->
+    <div class="row d-flex align-items-center justify-content-center" data-aos="fade-up">
+      <div class="card col-lg-5 col-md-4 col-sm-12 hvr-underline-from-center mb-3">
+        <img class="card-img-top hvr-float-shadow" src="../image/company/com1.png" alt="Card image cap">
+      </div>
+
+
+      <div class="card col-lg-5 col-md-4 col-sm-12 hvr-underline-from-center mb-3">
+        <img class="card-img-top hvr-float-shadow" src="../image/company/com2.jpg" alt="Card image cap">
+      </div>
+
+
+      <div class="card col-lg-5 col-md-4 col-sm-12 hvr-underline-from-center mb-3">
+        <img class="card-img-top hvr-float-shadow" src="../image/company/com3.png" alt="Card image cap">
+      </div>
+    </div>
+
+    <div class="scroll-buttons">
+      <a class="cus-link" href="pages/clients.html">show more</a>
+      <!-- Adjusted margin -->
+    </div>
+
   <!-- ///////////////////////////////start the footer ///////////////////////// -->
   <footer class="text-center text-lg-start footer-style text-muted row mt-5">
     <section
@@ -379,18 +400,6 @@
             <h6 class="text-uppercase fw-bold mb-4 text-white">
               <a href="index.html" class="logo me-auto"><img src="image/logo2-w.png" alt=""></a>
             </h6>
-            <!-- <h6 class=" fw-bold mb-2 text-white">Translate</h6>
-            <div id="google_translate_element"></div>
-            <script type="text/javascript">
-              function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                  pageLanguage: 'en',
-                  includedLanguages: 'en,ar'
-                }, 'google_translate_element');
-              }
-            </script>
-            <script type="text/javascript"
-              src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
           </div>
           <!-- Grid column -->
 
@@ -455,15 +464,12 @@
   <script src="js/jquery.mobile.customized.min.js"></script>
   
   <script src="js/purecounter/purecounter_vanilla.js"></script>
-  <script src="../js/js_m.js"></script>
+  <script src="js/js_m.js"></script>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollIt/1.0.3/scrollIt.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 </body>
 
 </html>

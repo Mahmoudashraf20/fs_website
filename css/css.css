@@ -127,6 +127,7 @@
   
   #header .logo img {
     max-height: 40px;
+    margin-left: 40%;
   }
   
   /* //////////////contact//////////////// */
@@ -160,7 +161,7 @@
   }
   
   .navbar ul {
-    margin: 0;
+    margin-right: 4%;
     padding: 0;
     display: flex;
     list-style: none;
@@ -197,7 +198,7 @@
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #3fbbc0;
+    color: #3fbbc0 !important;
   }
   
   .navbar .dropdown ul {
@@ -1393,3 +1394,8 @@ margin-bottom: 20px;
     color: color-mix(in srgb, var(--default-color), transparent 40%);
   }
   
+  /* /////////////////////nav//////////////////// */
+
+.li-alii{
+  margin-right: 5%;
+}
