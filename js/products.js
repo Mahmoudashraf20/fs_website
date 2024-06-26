@@ -40,30 +40,96 @@ const productSections = {
         imageUrl: '../image/f2.png'
       },
       {
-        name: 'Bend2',
+        name: 'Bend 2',
         description: ' a pipe fitting that is used to change the direction of the flow within a piping system. Here are some key points about bends, can have a large radius or small radius, affecting the flow characteristics. A long-radius bend provides a smoother change in direction and reduces pressure loss compared to a short-radius bend',
         price: 'x',
         imageUrl: '../image/f4.png'
+      },
+      {
+        name: 'Bend 3',
+        description: ' a pipe fitting that is used to change the direction of the flow within a piping system. Here are some key points about bends, can have a large radius or small radius, affecting the flow characteristics. A long-radius bend provides a smoother change in direction and reduces pressure loss compared to a short-radius bend',
+        price: 'x',
+        imageUrl: '../image/f12.png'
+      },
+      {
+        name: 'Bend 4',
+        description: ' a pipe fitting that is used to change the direction of the flow within a piping system. Here are some key points about bends, can have a large radius or small radius, affecting the flow characteristics. A long-radius bend provides a smoother change in direction and reduces pressure loss compared to a short-radius bend',
+        price: 'x',
+        imageUrl: '../image/f11.png'
       }
     ],
     product3: [
       {
         name: 'square Cover',
-        description: 'This is the description for product 2A.',
+        description: 'A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
         price: 'X',
         imageUrl: '../image/f7.png'
       },
       {
         name: 'Cover',
-        description: 'This is the description for product 2A.',
+        description: 'A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
         price: 'X',
         imageUrl: '../image/f9.png'
       },
       {
-        name: 'Cover',
-        description: ' flanged socket is a type of mechanical fitting used to connect pipes, hoses, or other cylindrical objects. It features a flange, which is a flat, protruding rim or collar that extends from the body of the socket. The flange usually contains holes for bolts or screws, allowing the socket to be securely attached to another surface, such as a pipe flange, valve, or a piece of machinery',
+        name: 'Cover 2',
+        description: 'A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
         price: 'X',
         imageUrl: '../image/f10.png'
+      },
+      {
+        name: 'Cover 3',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f15.png'
+      },
+      {
+        name: 'Cover 4',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f16.png'
+      },
+      {
+        name: 'Cover 5',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f17.png'
+      },
+      {
+        name: 'Cover 6',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f18.png'
+      },
+      {
+        name: 'Cover 7',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f19.png'
+      },
+      {
+        name: 'Cover 8',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f20.png'
+      },
+      {
+        name: 'Cover 9',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f21.png'
+      },
+      {
+        name: 'Cover 10',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f22.png'
+      },
+      {
+        name: 'Cover 11',
+        description: ' A manhole cover is a removable plate forming the lid over the opening of a manhole, an access point for underground utilities such as sewers, storm drains, and electrical vaults. It is designed to prevent anyone or anything from falling in and to keep unauthorized individuals out',
+        price: 'X',
+        imageUrl: '../image/f23.png'
       }
     ],
     product4: [
@@ -91,7 +157,7 @@ const productSections = {
         name: 'Reducer 1',
         description: 'it is a pipe fitting used in piping systems to connect two pipes of different diameters. It facilitates a smooth transition from a larger pipe to a smaller one (or vice versa), thereby managing flow rates, pressure, and fluid dynamics effectively. Reducers are crucial in maintaining the integrity of the piping system and ensuring efficient fluid transport',
         price: 'x',
-        imageUrl: '../image/f1.jpg'
+        imageUrl: '../image/f1.png'
       },
       {
         name: 'Reducer 2',
@@ -103,33 +169,33 @@ const productSections = {
     product6: [
       {
         name: 'Tee 1',
-        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter "T" and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
+        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter T and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
         price: 'x',
-        imageUrl: '../image/p7.jpg'
+        imageUrl: '../image/p7.png'
       },
       {
         name: 'Tee 2',
-        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter "T" and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
+        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter T and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
         price: 'x',
         imageUrl: '../image/p5.png'
       },
       {
         name: 'Tee 3',
-        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter "T" and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
+        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter T and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
         price: 'x',
-        imageUrl: '../image/p4.png'
+        imageUrl: '../image/p4.webp'
       },
       {
         name: 'Tee 4',
-        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter "T" and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
+        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter T and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
         price: 'x',
-        imageUrl: '../image/p2.png'
+        imageUrl: '../image/p2.webp'
       },
       {
         name: 'Tee 5',
-        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter "T" and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
+        description: 'it is a type of pipe fitting used in plumbing and piping systems to connect three sections of pipe or tubing. It is shaped like the letter T and allows for the branching of a pipe system into two directions, creating a junction. Tees are essential in various applications, including water distribution, gas pipelines, and chemical processing',
         price: 'x',
-        imageUrl: '../image/p1.png'
+        imageUrl: '../image/p1.webp'
       }
     ],
     product7: [
@@ -137,31 +203,31 @@ const productSections = {
         name: 'Pipes 1',
         description: 'This is cylindrical conduits used for transporting fluids (liquids and gases) from one location to another. They are essential components in a wide range of industries, including water supply, wastewater treatment, oil and gas, chemical processing, and HVAC systems. Pipes come in various materials, sizes, and specifications to meet the needs of different applications',
         price: 'x',
-        imageUrl: '../image/p9.jpg'
+        imageUrl: '../image/p9.png'
       },
       {
         name: 'Pipes 2',
         description: 'This is cylindrical conduits used for transporting fluids (liquids and gases) from one location to another. They are essential components in a wide range of industries, including water supply, wastewater treatment, oil and gas, chemical processing, and HVAC systems. Pipes come in various materials, sizes, and specifications to meet the needs of different applications',
         price: 'x',
-        imageUrl: '../image/p9.jpg'
+        imageUrl: '../image/p10.png'
       },
       {
         name: 'Pipes 3',
         description: 'This is cylindrical conduits used for transporting fluids (liquids and gases) from one location to another. They are essential components in a wide range of industries, including water supply, wastewater treatment, oil and gas, chemical processing, and HVAC systems. Pipes come in various materials, sizes, and specifications to meet the needs of different applications',
         price: 'x',
-        imageUrl: '../image/p10.jpg'
+        imageUrl: '../image/p11.png'
       },
       {
         name: 'Pipes 4',
-        description: 'This is cylindrical conduits used for transporting fluids (liquids and gases) from one location to another. They are essential components in a wide range of industries, including water supply, wastewater treatment, oil and gas, chemical processing, and HVAC systems. Pipes come in various materials, sizes, and specifications to meet the needs of different applications',
-        price: 'x',
-        imageUrl: '../image/p11.jpg'
-      },
-      {
-        name: 'Puddle with flanged',
         description: 'known as a puddle pipe or puddle collar, is a type of pipe fitting used to prevent water from seeping along the outside of a pipe that passes through concrete structures like walls, floors, or slabs. Puddle flanges are particularly useful in applications where pipes need to penetrate waterproof concrete structures, such as in basements, swimming pools, and water treatment plants',
         price: 'x',
-        imageUrl: '../image/p12.jpg'
+        imageUrl: '../image/p12.webp'
+      },
+      {
+        name: 'Pipes 5',
+        description: 'known as a puddle pipe or puddle collar, is a type of pipe fitting used to prevent water from seeping along the outside of a pipe that passes through concrete structures like walls, floors, or slabs. Puddle flanges are particularly useful in applications where pipes need to penetrate waterproof concrete structures, such as in basements, swimming pools, and water treatment plants',
+        price: 'x',
+        imageUrl: '../image/p13.png'
       }
     ],
     product8: [
@@ -172,10 +238,22 @@ const productSections = {
         imageUrl: '../image/f5.png'
       },
       {
-        name: 'Pillar Fire Hydrant',
+        name: 'Pillar Fire Hydrant 2',
         description: 'an above-ground fire hydrant, is a type of hydrant used for providing water supply in firefighting operations. This type of hydrant is designed to be mounted above the ground for easy access by firefighters. It is typically used in urban and suburban areas where quick access to a reliable water source is crucial in the event of a fire.',
         price: 'x',
         imageUrl: '../image/f6.png'
+      },
+      {
+        name: 'Pillar Fire Hydrant 3',
+        description: 'an above-ground fire hydrant, is a type of hydrant used for providing water supply in firefighting operations. This type of hydrant is designed to be mounted above the ground for easy access by firefighters. It is typically used in urban and suburban areas where quick access to a reliable water source is crucial in the event of a fire.',
+        price: 'x',
+        imageUrl: '../image/f13.png'
+      },
+      {
+        name: 'Pillar Fire Hydrant 4',
+        description: 'an above-ground fire hydrant, is a type of hydrant used for providing water supply in firefighting operations. This type of hydrant is designed to be mounted above the ground for easy access by firefighters. It is typically used in urban and suburban areas where quick access to a reliable water source is crucial in the event of a fire.',
+        price: 'x',
+        imageUrl: '../image/f14.png'
       }
     ]
     // Add other product sections here

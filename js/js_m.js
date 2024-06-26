@@ -34,108 +34,41 @@ function scrollCards(direction) {
 /////////////////////////////////////////////////////////////
 
 
-document.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.navbar');
-  const firstSection = document.querySelector('#first-section');
-  const sectionHeight = firstSection.offsetHeight;
-
-  if (window.scrollY > sectionHeight) {
-      navbar.classList.add('navbar-scrolled');
-      navbar.classList.remove('navbar-transparent');
-  } else {
-      navbar.classList.add('navbar-transparent');
-      navbar.classList.remove('navbar-scrolled');
-  }
-});
-
 
 //////////////////////////////// image - slider //////////////////////////////////
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
+ 
 
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
+ 
+  ////////////////expand text//////////////////////////////////
+  function myFunction2() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
     }
-  });
+  }
 
- /**
-   * Clients Slider
-   */
- new Swiper('.gallery-slider', {
-    speed: 400,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      }
+  //////ar///////
+  function myFunction() {
+    var dots = document.getElementById("dots2");
+    var moreText = document.getElementById("more2");
+    var btnText = document.getElementById("myBtn2");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "عرض تفاصيل اكثر"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "عرض تفاصيل اقل"; 
+      moreText.style.display = "inline";
     }
-  });
-
-  /**
-   * Initiate gallery lightbox 
-   */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
-  });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = GLightbox({
-      selector: 'a.gallery-lightbox'
-    });
-  });
-
-  
-  
+  }
