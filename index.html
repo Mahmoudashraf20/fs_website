@@ -90,6 +90,9 @@
             <li class="nav-item">
               <a class="nav-link" href="pages/contact.html"><b>Contact Us</b></a>
             </li>
+            <li class="nav-item">
+              <div id="google_translate_element"></div>
+            </li>
           </ul> 
         </div>
       </nav>
@@ -455,8 +458,36 @@
         href="https://github.com/mohey-e-maher">Mohey</a>
     </div>
   </footer>
-
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ar'
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- /////////////////////////// import JS code ///////////////////////// -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA36LmEfuLT4jyim3Pv_CkcuhWgp3VWeKQ",
+      authDomain: "sf-foundry.firebaseapp.com",
+      projectId: "sf-foundry",
+      storageBucket: "sf-foundry.appspot.com",
+      messagingSenderId: "667391334093",
+      appId: "1:667391334093:web:c504d5f134efb86603fb84"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
   <script>
     AOS.init();
  </script>

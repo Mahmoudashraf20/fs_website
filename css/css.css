@@ -1399,3 +1399,24 @@ margin-bottom: 20px;
 .li-alii{
   margin-right: 5%;
 }
+
+/* ///////////////////////// translate //////////////////////////// */
+.goog-te-gadget{
+  color: white !important;
+  display: inline-flex;
+  }
+  .VIpgJd-ZVi9od-ORHb-OEVmcd{
+    z-index:0 !important;
+
+  }
+  .VIpgJd-ZVi9od-l4eHX-hSRGPd, .VIpgJd-ZVi9od-l4eHX-hSRGPd:link, .VIpgJd-ZVi9od-l4eHX-hSRGPd:visited, .VIpgJd-ZVi9od-l4eHX-hSRGPd:hover, .VIpgJd-ZVi9od-l4eHX-hSRGPd:active{
+    display: none;
+  }
+  /* Hide the language selection dropdown */
+/* #google_translate_element{
+  display: none;
+} */
+/* Hide the "powered by" text */
+#google_translate_element .VIpgJd-ZVi9od-l4eHX-hSRGPd {
+  display: none;
+}
