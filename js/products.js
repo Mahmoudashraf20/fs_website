@@ -1,4 +1,3 @@
-
 const productSections = {
     product1: [
       {
